@@ -3,29 +3,23 @@ package overloading;
 //Within a class having same method name & different arguments.
 //Arguments should be in different order
 //Arguments should be in different type
-//return type can be different
+//return type can be different--One method has the return type int overload can be have Integer or other
 //access modifiers can be different
 public class OverLoadingExmaple {
 
-
 	public int add(int a,int b) { return a+b; }
-
 
 
 	public int add(int a,int b,int c) { return a+b+c; }
 
 
-
 	public void method(Object obj) { System.out.println("Object Method"); }
-
 
 
 	public void method(String string) { System.out.println("String Method"); }
 
 
-
 	public void method(Integer integer) { System.out.println("Integer Method"); }
-
 
 
 	public void method(int intValue) { System.out.println("int Method"); }

@@ -18,7 +18,10 @@ public class StaticExample {
 	{
 		System.out.println("static block");
 	}
-	StaticExample()
+	//Constructor should have same name as class name
+	//No return type
+	//It will call when we create the instance
+	public StaticExample()
 	{
 		System.out.println("constructor block");
 		
@@ -30,16 +33,17 @@ public class StaticExample {
 	}
 
 	//we should create object for class to call non static method.
-	//we can use both static and non static variables.
-	public void nonStaicMethod()
+	//we can use both static and non static variables inside method.
+	public void nonStaticMethod()
 	{
 		instantNumber++;
 		staticNumber++;
 	}
 
 	//Object creation is not required to call static method because it is belongs to class.
-	//we cann't use non static variables,we can use only static variables.
-	public static void staicMethod()
+	//we can method directly
+	//we cann't use non static variables,we can use only static variables inside method.
+	public static void staticMethod()
 	{
 		//instantNumber++;
 		staticNumber++;
@@ -48,14 +52,14 @@ public class StaticExample {
 	public static void main(String[] args) {
 		
 		
-		new StaticExample();
-		new StaticExample();
-		new StaticExample();
+		StaticExample staticExample1 = new StaticExample();
+		StaticExample staticExample2 = new StaticExample();
+		StaticExample staticExample3 = new StaticExample();
 		
 		StaticExample staticExample = new StaticExample();
-		staticExample.nonStaicMethod();//object is required to call non static method
+		staticExample.nonStaticMethod();//object is required to call non static method
 		
-		staicMethod();//directly we are calling static method
+		staticMethod();//directly we can call static method
 	}
 
 }
